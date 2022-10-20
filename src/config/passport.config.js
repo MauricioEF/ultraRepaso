@@ -39,7 +39,7 @@ const initializePassport = () => {
     passport.use('google', new GoogleStrategy({
         clientID: config.auth.google.CLIENT_ID,
         clientSecret: config.auth.google.CLIENT_SECRET,
-        callbackURL: 'http://localhost:8080/api/sessions/googlecallback',
+        callbackURL: `${config.app.DOMAIN}/api/sessions/googlecallback`,
     }, async (accessToken, refreshToken, profile, done) => {
         try {
             const { email, name, picture } = profile._json

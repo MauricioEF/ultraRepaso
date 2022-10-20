@@ -1,4 +1,7 @@
 export default {
+    app:{
+        DOMAIN:process.env.SELF_DOMAIN
+    },
     mongo:{
         DATABASE:process.env.MONGO_DATABASE,
         USER:process.env.MONGO_USER,
